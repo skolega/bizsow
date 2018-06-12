@@ -1,0 +1,336 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-04-15, 17:50:49
+    Author     : skole
+*/
+html, body, h1, h2, h3, h4, h5, h6, p, a, strong, span{
+    font-family: 'Open Sans', sans-serif !important;
+}
+.my_extra_menu_class li{
+    text-decoration: none;
+    list-style: none;
+    float:left;
+    text-decoration: none;
+    list-style: none;
+    margin-left:30px;
+}
+
+.my_extra_menu_class ul{
+    text-align: right;
+    float: right;
+}
+
+.my_extra_menu_class a{
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+.my_extra_menu_class li:last-child a{
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    background: #BE2843;
+    padding:5px 10px;
+    border-radius: 5px;
+}
+
+.header{
+    background-color: #f8f9fa;
+}
+
+.btn-red{
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    background: #BE2843;
+    padding:15px 40px;
+    border-radius: 5px;
+}
+
+.header img{
+    width: 250px;
+    padding: 25px;
+}
+
+.my_extra_menu_class {
+    margin-top:34px;
+}
+
+.section1{
+    background:#E0F5FC;
+    min-height: 200px;
+}
+
+.section1 .container{
+    background-image: url("../img/sekcja-1.jpg"); 
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.top-space-150{
+    margin-top:150px;
+}
+
+.top-space-100{
+    margin-top:100px;
+}
+
+.top-space-32{
+    margin-top:32px;
+}
+
+.bolder-900{
+    font-weight: 900;
+}
+.text-bright{
+    color:#86898c !important;
+}
+.section1 a{
+    margin-top:50px
+}
+
+.section2{
+    min-height: 600px;
+    margin-bottom: 128px;
+}
+.section3{
+    background-color: #17495C;
+    background-image: url("../img/testimonial1.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 680px;
+    color:white;
+}
+.section2_active{
+    font-weight: 900;
+}
+.btn-sec2{
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+.slide {
+    text-align: center;
+    width: 100%;
+}
+.slide h1{
+    color: #1B1464;
+    font-size: 79px;
+    line-height: 64px;
+    margin-bottom: 64px;
+    margin-top: 32px;
+    text-align: left;
+}
+
+.slide li{
+    font-size: 27px;
+    /*margin-bottom: 5px;*/
+    color:#4D4D4D;
+    text-align: left;
+}
+
+.slide ul{
+    margin-bottom: 64px;
+}
+.slide .btn-red{
+    width:100%;
+}
+#slide1 > div:first-child{
+    background-image: url("../img/slide1.jpg"); 
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+#slide2  > div:first-child{
+    background-image: url("../img/slide2.jpg"); 
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+#slide3 >  div:first-child{
+    background-image: url("../img/slide3.jpg"); 
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+#slide4 >  div:first-child{
+    background-image: url("../img/slide4.jpg"); 
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.section3 h1{
+    color: white;
+    font-size: 79px;
+    line-height: 64px;
+    margin-bottom: 64px;
+    margin-top: 110px;
+    text-align: left;
+}
+
+.section3 p{
+    margin-bottom: 32px;
+}
+
+.page-title{
+    width: 100%;
+    margin-bottom: 64px;
+    margin-top: 128px;
+    text-align: center;
+}
+.page-title h1{
+    font-size: 64px;
+    line-height: 64px;
+}
+.tesimonial_nav{
+    text-align: center;
+}
+.tesimonial_nav svg {
+    cursor: pointer;
+}
+.post_img img{
+    width: 100%;
+    height: 200px;
+}
+.section4 .col-md-4{
+    padding:20px 30px;
+}
+.post_title{
+    margin-top:24px;
+    margin-bottom:12px;
+    
+}
+
+.post_title a{
+    color: black;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.post_exc{
+    color:#808080;
+}
+.post_more div:last-child{
+    text-align: right;
+    font-weight: 700;
+}
+.post_more div:first-child img{
+    width:20px;
+}
+.post_more{
+    margin-bottom: 64px;
+}
+.section4{
+    margin-bottom: 64px;
+}
+.section5{
+    background-image: url("../img/sec5bg.jpg"); 
+    padding-top:128px;
+    min-height: 594px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section6{
+    padding: 128px 0;
+}
+.section6 h4{
+    padding: 32px 0;
+}
+.section6 h1 span{
+    color:#8CC63F;
+}
+
+.section6 form{
+    background: #F8F8F8;
+    padding: 10px;
+}
+
+.section7 {
+    background: #F15A24;
+    color: white;
+    text-align: center;
+    padding: 124px 0px;
+}
+
+.btn-green{
+    padding:10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: greenyellow;
+}
+
+.btn-green1{
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    background: #5cb85c;
+    padding: 15px 40px;
+    border-radius: 5px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.footer{
+    background: #434647;
+    color:#D5D5D5;
+    width: 100%;
+    padding-top: 64px;
+}
+.footer li{
+    list-style: none;
+}
+
+.footer h2{
+    font-size: 24px;
+}
+
+.footer a{
+    color:#D5D5D5;
+}
+.footer ul{
+    padding: 0;
+}
+.menu-section-2{
+    font-size: 24px;
+}
+
+.menu-section-2 div{
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+.menu-section-2 div:hover{
+    opacity: 0.5;
+}
+.image-post img{
+    width:100%;
+}
+#section2 container{
+    overflow-x: hidden
+}
+
+.text-orange{
+    color:#F15A24;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.pdf-page img{
+    width:100%;
+}
+
+.portfolio-desc{
+    text-align: left;
+}
+
+#offer .slide{
+    min-height: 600px;
+}
