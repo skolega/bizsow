@@ -8,7 +8,10 @@ and open the template in the editor.
     Author     : skole
 */
 html, body, h1, h2, h3, h4, h5, h6, p, a, strong, span{
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Nunito Sans', sans-serif;
+}
+h1 {
+    font-size:32px;
 }
 .my_extra_menu_class li{
     text-decoration: none;
@@ -61,15 +64,25 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, strong, span{
 }
 
 .section1{
-    background:#E0F5FC;
-    min-height: 200px;
+    min-height: 850px;
+    color:white;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c1d37f+0,a7d102+100 */
+    background: #c1d37f; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #c1d37f 0%, #a7d102 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #c1d37f 0%,#a7d102 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #c1d37f 0%,#a7d102 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1d37f', endColorstr='#a7d102',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.section1 p {
+    /*width:50%;*/
 }
 
 .section1 .container{
-    background-image: url("../img/sekcja-1.jpg"); 
-    min-height: 600px;
+    background-image: url("../img/sekcja-1.png"); 
+    min-height: 700px;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: center left;
 }
 .top-space-150{
     margin-top:150px;
@@ -85,6 +98,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, strong, span{
 
 .bolder-900{
     font-weight: 900;
+    font-size: 92px;
+    line-height: 74px;
 }
 .text-bright{
     color:#86898c !important;
@@ -94,7 +109,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, strong, span{
 }
 
 .section2{
-    min-height: 600px;
+    min-height: 760px;
     margin-bottom: 128px;
 }
 .section3{
@@ -102,7 +117,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, strong, span{
     background-image: url("../img/testimonial1.jpg");
     background-position: right;
     background-repeat: no-repeat;
-    height: 680px;
+    height: 1080px;
     color:white;
 }
 .section2_active{
@@ -144,21 +159,25 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, strong, span{
     background-image: url("../img/slide1.jpg"); 
     background-repeat: no-repeat;
     background-position: right bottom;
+    min-height: 840px;
 }
 #slide2  > div:first-child{
     background-image: url("../img/slide2.jpg"); 
     background-repeat: no-repeat;
     background-position: right bottom;
+    min-height: 840px;
 }
 #slide3 >  div:first-child{
     background-image: url("../img/slide3.jpg"); 
     background-repeat: no-repeat;
     background-position: right bottom;
+    min-height: 840px;
 }
 #slide4 >  div:first-child{
     background-image: url("../img/slide4.jpg"); 
     background-repeat: no-repeat;
     background-position: right bottom;
+    min-height: 840px;
 }
 
 .section3 h1{
@@ -200,7 +219,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, strong, span{
 .post_title{
     margin-top:24px;
     margin-bottom:12px;
-    
+
 }
 
 .post_title a{

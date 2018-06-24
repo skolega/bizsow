@@ -4,16 +4,17 @@ get_header();
 <div class="section1">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
                 <div class="top-space-150">
                     <h1 class="bolder-900">ZBUDUJ LEPSZY BIZNES</h1>
-                    <h3>REKLAMA W SIECI KTÓRA ZARABIA</h3>
+                    <h3>REKLAMA KTÓRA ZARABIA</h3>
                     <p>Nie wyrzucaj pieniędzy na mało skuteczną reklamę.
                         Rozwiń Biznes - reklamuj się tym ludziom którzy 
                         są potencjalnymi kupcami i szukają Ciebie.</p>
                     <strong>Pobierz bezpłatne porady jak rozpocząć reklamę</strong>
                     <br/><br/>
-                    <a href="<?php echo get_site_url(); ?>/pobierzpdf" class="btn-red">POBIERZ BEZPŁATNY PDF</a>
+                    <a href="<?php echo get_site_url(); ?>/pobierzpdf" class="btn-red">POBIERZ PDF</a>
                 </div>
             </div>
             <div class="col-md-6">
