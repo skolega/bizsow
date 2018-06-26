@@ -49,9 +49,16 @@ h1 {
     color: white;
     font-size: 24px;
     font-weight: 900;
-    background: #BE2843;
+    background: #28a745;
     padding:15px 40px;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+.btn-red:hover{
+    color:yellow;
+    text-decoration: none;
+    background-color: #f34766;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .header img{
@@ -115,7 +122,7 @@ h1 {
 .section3{
     background-color: #17495C;
     background-image: url("../img/testimonial1.jpg");
-    background-position: right;
+    background-position: bottom right;
     background-repeat: no-repeat;
     height: 1080px;
     color:white;
@@ -147,6 +154,7 @@ h1 {
     /*margin-bottom: 5px;*/
     color:#4D4D4D;
     text-align: left;
+    list-style: none;
 }
 
 .slide ul{
@@ -204,7 +212,7 @@ h1 {
     line-height: 64px;
 }
 .tesimonial_nav{
-    text-align: center;
+    /*text-align: center;*/
 }
 .tesimonial_nav svg {
     cursor: pointer;
@@ -268,7 +276,12 @@ h1 {
 }
 
 .section7 {
-    background: #F15A24;
+    background: #c1d37f; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #c1d37f 0%, #a7d102 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #c1d37f 0%,#a7d102 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #c1d37f 0%,#a7d102 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1d37f', endColorstr='#a7d102',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     color: white;
     text-align: center;
     padding: 124px 0px;
@@ -285,9 +298,16 @@ h1 {
     color: white;
     font-size: 24px;
     font-weight: 900;
-    background: #5cb85c;
+    background: #ffc107;
     padding: 15px 40px;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+.btn-green1:hover{
+    text-decoration: none;
+    color:yellow;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    background-color: orange;
 }
 
 .text-center{
@@ -352,4 +372,9 @@ h1 {
 
 #offer .slide{
     min-height: 600px;
+}
+
+.list-unstyled li{
+    margin-bottom: 16px;
+    font-size: 24px;
 }

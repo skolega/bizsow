@@ -3,7 +3,7 @@
 Plugin Name: Custom Facebook Feed
 Plugin URI: http://smashballoon.com/custom-facebook-feed
 Description: Add completely customizable Facebook feeds to your WordPress site
-Version: 2.6.2
+Version: 2.7
 Author: Smash Balloon
 Author URI: http://smashballoon.com/
 License: GPLv2 or later
@@ -24,7 +24,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define('CFFVER', '2.6.2');
+define('CFFVER', '2.7');
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 //Include admin
@@ -243,12 +243,7 @@ function display_cff($atts) {
     if (!isset($cff_cache_time)) $cff_cache_time = '0';
     $cff_cache_time_unit = $atts[ 'cacheunit' ];
 
-    //Don't allow cache time to be less than 15 minutes in order to minimize API requests
-    if(!isset($cff_cache_time) || $cff_cache_time == '0' || (intval($cff_cache_time) < 15 && $cff_cache_time_unit == 'minutes' ) ){
-        $cff_cache_time = 15;
-        $cff_cache_time_unit = 'minutes';
-    }
-    if($cff_cache_time == 'none') $cff_cache_time = 0;
+    if($cff_cache_time == 'nocaching') $cff_cache_time = 0;
 
     $cff_class = $atts['class'];
     //Compile feed styles
@@ -677,36 +672,41 @@ function display_cff($atts) {
     $access_token_array = array(
         '1786066011417150|5043eac44ee54731ed404b9db021cdf2',
         '1795317140689602|e25d547c4f12164254f85eead086b0a7',
-        '181607922248075|d0787a2cfff89efd23b9fe1ffafa45db',
         '1851314935096786|0de2a9ec77d745d6941850696ce166f9',
-        '1983264355330375|e5c100f6d4b768abb560e7df1771ac89',
-        '209804229584368|3a2d59f876e0df3d42d829f8a1569636',
-        '274376249625432|03d7cc70158f4b720a124c11aad5606e',
-        '927474184059774|ekzzwIV9JnvG-ELYWut9wIvf4Y0',
-        '157849737751172|1wgUYn-UwVvoiZkvROi7yi2aIRw',
-        '140081703552|rtuoT3AGRIzb-z_PPUlOnN9iYA0',
         '322095208287051|pbCTS6jPuhjR18sl2UPhKQw7eyY',
-        '1439406912938596|4JDCXisJ2d-1EWeObBt27DybH5c',
         '1042396375891598|gn2HiZgDgjTbCMcXsSb6VK91PqM',
         '348613608818294|d4gRX7tNppCrI-DrOGof_O8gwvg',
-        '502797619766223|fuoqcs_7_9HPokY0C296S4VtB0o',
         '1591407604237466|cHUFs9XDDJa7LDUW9zBxirwGAHE',
-        '277269689412168|o3k5mzmHsT-prqc2qizxk_DoXEQ',
-        '386881278380301|NW_PiECD9TLVe0UNMsB5H9HkPEo',
         '697312047120344|p8ST5dkrub6IoBZsClmyRBTScB0',
         '1134584793234186|763Jh88I-PuO8_slARazfgucxFg',
-        '257106408010811|MwCorr7qsyIeU_GjdPFIEw3-_P8',
-        '1693018934313805|VYDjx69NpsgkDEAm79cYD0fxJBk',
-        '1298990730176646|rU4QhoOaYPWQng6-k_QdxRoVNaA',
         '1788677371359317|UU7yeB5dsKOT8xLsLA9xSNu4OMQ',
-        '1876405409266356|VT8hdBxkbAf6-PCq-TosrtiMilU',
-        '128947497630881|rlgLr8wtMUWRw7hbcLcsgoa01-k',
-        '963645750343660|1mgCt1EhXAI0o51tYpZ7O6dThKM',
-        '177899259380474|JgdlhmU-J0dq55bKng0xywDIgIo',
-        '1106367462776766|Pj4xBlwzMH53yCQw7-h_prMExQg',
-        '131153380694449|jxU6_J0SobvxNG-pzJW8MKsI0w8'
+        '1024245627652108|VmyBFUaBhjmvF31kPWdLcwtA0nU',
+        '1665626540320930|kDmIPfF8Y0mvV5mPr3927c2nRlM',
+        '219254908466738|9AAaE_5GnONhVWUTlEBS8LDiFi8',
+        '383334425112756|cxkb0YngoQPVkr7AngA_LOE2TV8',
+        '1711513059125773|IuTAeRQAzhUelndJ_n7jPx3yOxs',
+        '1425047524403499|shKbcYtt0KmDzOG5n9hkuVmP1bA',
+        '1677248395890039|CSZsE5C-HJ8cYOraU6J6gwACZys',
+        '162288250832230|HvQ8grGeT3QGVEFgRkooK-V55vs',
+        '258557634485082|vBEtyzuLUrCVDeks57FPNbH5YCo',
+        '1028332560591295|InX-Kx2LF2tjcfjbz4ddP6wXJ6U',
+        '1816228771930249|xW0dj0nD-gWTl9oUEFyz7kCn4Gk',
+        '451848331655448|YnHljWJNCMRxlo5JwAQRukxqQj0',
+        '1590285041189842|PNrjtuwPpJWAda9GjvDnYCZvQH0',
+        '1425919427736604|6NKiBWf5_rR4DuV2z1E_Pk27F2I',
+        '198080700214649|natEgdD5R82UoiLXL5UsUK82-O8',
+        '452046251639377|sruLhZT7bktRpuPy0txclkvCMWE',
+        '282581258595802|QRueniLvr6ppOBW9UcNpJVswGKw',
+        '120755681588984|8IamCzI5D56psRs_726PwSgUgos',
+        '236542103198412|YZBFLCWsx_ap_c2rmznf_tEbh6E',
+        '820682411352870|0W2O9df8U0suAfllTVdPP2Zl8lI',
+        '444110102425340|1xyyWHpqzWy5jNrMnNAsMgIIKVI',
+        '334097170130531|fpcajp_H4f79HoAP2j5Ryo_0OKE',
+        '350665888465252|pi9du5kAZ9JRDAfxzNpq-S7w7Zw',
+        '294686830545691|3DhoPPXbNBmzlmXXK9cbLnGJTMI'
     );
-    if ($access_token == '' || !$cff_show_access_token) $access_token = $access_token_array[rand(0, 29)];
+
+    if ($access_token == '' || !$cff_show_access_token) $access_token = $access_token_array[rand(0, 33)];
 
     //Check whether a Page ID has been defined
     if ($page_id == '') {
@@ -871,6 +871,8 @@ function display_cff($atts) {
     //Limit var
     $i_post = 0;
 
+    if ($access_token == '' || !$cff_show_access_token) $access_token = '395202813876688|73e8ede72008b231a0322e40f0072fe6';
+
     //Define array for post items
     $cff_posts_array = array();
     
@@ -879,11 +881,17 @@ function display_cff($atts) {
 
         $cff_posts_json_url = 'https://graph.facebook.com/' . $page_id . '/' . $graph_query . '?fields=id,from,message,message_tags,story,story_tags,link,source,name,caption,description,type,status_type,object_id,created_time&access_token=' . $access_token . '&limit=' . $cff_post_limit . '&locale=' . $cff_locale . $cff_ssl;
 
-        //Temporarily set caching time to be minimum of 30 minutes
-        if( $cache_seconds < 1800 || !isset($cache_seconds) ) $cache_seconds = 1800;
 
-        //Temporarily increase default caching time to be 2 hours
-        if( $cache_seconds == 3600 ) $cache_seconds = 7200;
+        if( $cff_show_access_token && strlen($access_token) > 130 ){
+            //If using a Page Access Token then set caching time to be minimum of 5 minutes
+            if( $cache_seconds < 300 || !isset($cache_seconds) ) $cache_seconds = 300;
+        } else {
+            //Temporarily set caching time to be minimum of 1 hour
+            if( $cache_seconds < 3600 || !isset($cache_seconds) ) $cache_seconds = 3600;
+
+            //Temporarily increase default caching time to be 4 hours
+            if( $cache_seconds == 3600 ) $cache_seconds = 14400;
+        }
 
         //Don't use caching if the cache time is set to zero
         if ($cff_cache_time != 0){
@@ -904,8 +912,13 @@ function display_cff($atts) {
                 //Check whether any data is returned from the API. If it isn't then don't cache the error response and instead keep checking the API on every page load until data is returned.
                 $FBdata = json_decode($posts_json);
                 if( !empty($FBdata->data) ) {
-                    //Cache the JSON
-                    set_transient( $transient_name, $posts_json, $cache_seconds );
+
+                    //If it's a rate limit error then don't cache the response so another token can be used
+                    if (strpos($posts_json, '"error":{"message":"(#4) Application request limit reached",') == false && strpos($posts_json, 'Error validating application. Application has been deleted.') == false) {
+                        //Cache the JSON
+                        set_transient( $transient_name, $posts_json, $cache_seconds );
+                    }
+                    
                 }
             } else {
                 $posts_json = get_transient( $transient_name );

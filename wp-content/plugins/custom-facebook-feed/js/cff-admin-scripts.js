@@ -187,4 +187,25 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	//Facebook login
+	$('#cff_fb_login').on('click', function(){
+		$('#cff_fb_login_modal').show();
+	});
+	$('#cff_admin_cancel_btn').on('click', function(){
+		$('#cff_fb_login_modal').hide();
+	});
+
+	//Select a page for token
+	$('.cff-managed-page').on('click', function(){
+		$('#cff_access_token, #cff_page_access_token').val( $(this).attr('data-token') ).addClass('cff-success');
+		// $('#cff_page_id').val( $(this).attr('data-page-id') );
+		$(this).siblings().removeClass('cff-page-selected');
+		$(this).addClass('cff-page-selected');
+		// $('.cff-save-page-token').show();
+		//Check the own access token setting so it reveals token field
+		if( $('#cff_show_access_token:checked').length < 1 ){
+			$("#cff_show_access_token").trigger("change").prop( "checked", true );
+		}
+	});
+
 });

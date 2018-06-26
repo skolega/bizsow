@@ -158,7 +158,7 @@ get_header();
 <div class="section4">
     <div class="container">
         <div class="page-title">
-            <h1>Ostatnio napisane</h1>
+            <h1 class="bolder-900">NASZE PUBLIKACJE</h1>
         </div>
         <?php $my_query = new WP_Query('showposts=3'); ?>
         <div class="row">
@@ -196,7 +196,7 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1>TO WŁAŚNIE MY</h1>
+                <h1 class="bolder-900">TO WŁAŚNIE MY</h1>
                 <p>Mamy wiele wspólnego, jestesmy po ślubie i zajmujemy się marketingiem internetowym, tworzeniem stron internetowych, grafiką komputerową.</p>
                 <h4>Magdalena Jeleń-Buczek</h4>
                 <p>Ja zajmuję się reklamami AdWords i Google, pracowałam dla firmy Google i to własnie tam poznałam wszystkie produkty reklamowe od Google.</p>
@@ -439,7 +439,7 @@ get_header();
     </div>
 </div>
 <div class="section7">
-    <h1>Podejmij działanie <a href="<?php echo get_site_url(); ?>/zarabiaj" class="btn-green btn-send btn-success">CHCĘ ZARABIAĆ</a></h1>
+    <h1>Podejmij działanie <a href="<?php echo get_site_url(); ?>/zarabiaj" class="btn-green1 btn-send btn-success">CHCĘ ZARABIAĆ</a></h1>
 </div>
 <?php
 get_footer();

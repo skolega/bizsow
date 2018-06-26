@@ -3,7 +3,7 @@ Contributors: smashballoon
 Tags: Facebook, Facebook feed, Facebook posts, Facebook wall, Facebook page
 Requires at least: 3.0
 Tested up to: 4.9
-Stable tag: 2.6.2
+Stable tag: 2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -264,6 +264,16 @@ You no longer need your own Access Token to use the Custom Facebook Feed Plugin,
 9. It's super easy to display your Facebook feed in any page or post
 
 == Changelog ==
+
+= 2.7 =
+* New: Now easily get your own Access Token to avoid any Facebook connection issues. Simply click the blue "Log in and get my Access Token" button on the plugin's settings page and connect your Facebook account to get your token. The Access Token will work to get posts from ANY Facebook page. Thanks to our friends at SlickRemix for powering our new login and getting the plugin back up and running again!
+* Tweak: Removed the minimum caching time if you're using your own Page Access Token
+
+= 2.6.4 =
+* **Important:** If you are displaying posts from a Facebook page that **you are an admin of** then it is now highly recommended that you retrieve your own Access Token for that page to avoid any API rate limit errors. Simply follow these [step-by-step](https://smashballoon.com/custom-facebook-feed/page-token/) instructions to obtain one.
+
+= 2.6.3 =
+* Fix: Fixed an issue where API errors were being cached
 
 = 2.6.2 =
 * Fix: Replaced all HTTP links with HTTPS
