@@ -126,7 +126,8 @@ get_header();
                     <h1 class="bolder-900">NIE WIERZYSZ? OPINIE !</h1>
                     <p>Od początku wierzyłam w sukces takiej reklamy, 
                         założyłam profil na facebooku i nawiązałam kontakt z moimi klientkami. 
-                        Potroiłam ilość klientek, mam z nimi stałą relację. Polecam rozwiązanie reklamy w internecie.</p>
+                        Potroiłam ilość klientek, mam z nimi stałą relację. 
+                        Polecam rozwiażanie reklamy w internecie.</p>
                     <img src="./wp-content/themes/biznessowa/img/proof1.jpg"/>
                 </div>
                 <div class="col-md-4"></div>
